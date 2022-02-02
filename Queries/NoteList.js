@@ -10,8 +10,12 @@ function NoteList(props){
                <NoteItem 
                 key={order.id}
                 id={order.id}
-                title={order.title}
-                body={order.body}
+                Username={order.username}
+                pnr={order.pnr}
+                seatNumber={order.seatNumber}
+                health_info={order.health-info}
+                food={order.food}
+                query={order.query}
                 // image={order.image}
                 setitemChange={props.setitemChange}
                 itemChange={props.itemChange}
