@@ -23,7 +23,7 @@ const Login = ({ setLoginUser}) => {
     }
 
     const login = () => {
-        axios.post(`http://localhost:8080/api/v1/users/login/${user.userName}`, user.password)
+        axios.post(`http://localhost:8080/api/v1/users/login/${user.userName}`, user)
        
         .then(res => {
             console.log(user)
