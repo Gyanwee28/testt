@@ -60,8 +60,10 @@ function NoteItem(props) {
                 
                 
                 <div className={classes.content}>
-                    <h3>{props.title}</h3>
-                    <p>{props.body}</p>
+                    <h3>{props.username}</h3>
+                    <p>{props.seatNumber}</p>
+                    <p>{props.food}</p>
+                    <p>{props.query}</p>
                     {/* {props.image!==null && <Link exact activeClassName="active_class" onClick={onClickImg} >View Image</Link>} */}
                 </div>
                 <div className={classes.actions}>
