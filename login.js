@@ -24,7 +24,7 @@ const Login = ({ setLoginUser}) => {
     }
 
     const login = () => {
-        axios.post(`http://localhost:8080/api/v1/users/login/${user.userName}`, user.password)
+        axios.post(`http://localhost:8080/api/v1/users/login/${user.userName}`, user)
        
         .then(res => {
             console.log(user)
@@ -32,7 +32,7 @@ const Login = ({ setLoginUser}) => {
             // alert(res.data.message)
             setLoginUser(res.data.user)
             window.localStorage.setItem('userName',user.userName)
-            history.push("/notes")
+            history.push("/home")
         })
         .catch(err => {
             alert("Invalid credentials")
